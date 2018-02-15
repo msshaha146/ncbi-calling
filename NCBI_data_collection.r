@@ -10,7 +10,7 @@ getPubmedData <- function(searchString, fileName){
   
   pubmed_data <- data.frame('PMID'=PMID(records),'Country'=Country(records),'Volume'=Volume(records),'Citation'=Cited(records),'Title'=ArticleTitle(records),'Abstract'=AbstractText(records))
   
-  print('Writing to file - PubmedData.csv')
+  print('Writing to file - fileName')
   write.csv(pubmed_data, file = paste(fileName, '.csv'))
   
   return(pubmed_data)
